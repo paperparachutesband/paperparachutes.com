@@ -79,6 +79,16 @@ a:active i.fab {
 	align-items: center;
 }
 
+.footer {
+	width: 100vw;
+	height: 5vh;
+	position: absolute;
+	bottom: 0;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+}
+
 /*desktop*/
 	@media only screen and (min-width:1024px) {
 		.grid-item.title {
