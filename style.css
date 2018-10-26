@@ -54,6 +54,7 @@ a:active i.fab {
 	width: 100vw;
 	top: 0;
 	left: 0;
+	overflow: hidden;
 }
 
 .icon-wrapper {
