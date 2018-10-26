@@ -27,6 +27,8 @@ img {
 	font-size: 23px;
 	position: absolute;
 	top: 10vh;
+	height: 10vh;
+	margin: 0 auto;
 }
 
 a, 
@@ -71,7 +73,7 @@ a:active i.fab {
 
 .icon {
 	width: 25%;
-	height: 100px;
+	height: 80px;
 	margin: 0;
 	padding: 0;
 	display: flex;
