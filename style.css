@@ -3,31 +3,29 @@
 	font-family: 'Oxygen', sans-serif;
 	font-weight: 300;
 }
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
 
 body {
-	padding: 0;
-	margin: 0;
 	width: 100vw;
+	height: 100vh;
 	background-color: #000;
 	overflow-x: hidden;
 	overflow-y: hidden;
-}
-
-img {
-	margin: 0;
-	padding: 0;
-	min-height: 100vh;
-	min-width: 100vw;
-	opacity: 0.3;	
+	background-image: url(imgs/paperparachutesband.jpg);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-size: cover;
 }
 
 .grid-item.title {
 	z-index: 5000;
-	color: white;
-	font-size: 23px;
-	position: absolute;
-	top: 10vh;
-	height: 10vh;
+	color: #fff;
+	font-size: 5vw;
 	margin: 0 auto;
 }
 
@@ -37,7 +35,6 @@ i.fab  {
 	display: inline-block;
 	color: white;
 	font-size: 50px;
-	/*transition: scale 0.5s ease-in-out;*/
 }
 
 a:hover, 
@@ -51,19 +48,20 @@ a:active i.fab {
 .grid-container {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	box-sizing: border-box;
 	width: 100vw;
-	top: 0;
-	left: 0;
+	min-height: 100vh;
 	overflow: hidden;
+	background: linear-gradient(
+	    rgba(0, 0, 0, 0.6), 
+	    rgba(0, 0, 0, 1)
+	  );
 }
 
 .icon-wrapper {
 	width: 100vw;
-	position: absolute;
-	top: 40vh;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -83,22 +81,24 @@ a:active i.fab {
 
 .footer {
 	width: 100vw;
-	height: 5vh;
-	position: absolute;
-	bottom: 0;
 	color: #fff;
 	display: flex;
 	justify-content: center;
 }
 
 /*desktop*/
-	@media only screen and (min-width:1024px) {
-		.grid-item.title {
-			font-size: 4rem;
-		}
+	@media only screen and (min-width:900px) {
 
 		.icon-wrapper { 
-			top: 50vh;
 			width: 50vw;
 		}
 	}
+
+	@media only screen and (max-height:350px) {
+		body,
+		.grid-container  {
+			overflow-y: scroll;
+		}
+
+	}
+
