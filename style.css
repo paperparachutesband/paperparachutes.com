@@ -7,6 +7,8 @@ html, body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
+	scroll-behavior: smooth; /*need this because scroll between elements on click*/
+	-webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -220,7 +222,6 @@ a:active svg * {
 }
 
 .close {
-	background-color: red;
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -236,6 +237,7 @@ a:active svg * {
 	position: fixed;
 	padding-bottom: fixed;
 	bottom: 0;
+	z-index: 10;
 }
 
 /*desktop*/
