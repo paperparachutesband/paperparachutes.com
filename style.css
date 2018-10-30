@@ -35,6 +35,8 @@ body {
 	box-sizing: border-box;
 	width: 100vw;
 	min-height: 100vh;	
+	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
 .grid-item.title {
@@ -218,10 +220,11 @@ a:active svg * {
 }
 
 .close {
-	/*background-color: red;*/
+	background-color: red;
 	position: absolute;
 	top: 0;
 	right: 0;
+	cursor: pointer;
 }
 
 .footer {
@@ -231,7 +234,8 @@ a:active svg * {
 	display: flex;
 	justify-content: center;
 	position: fixed;
-	bottom: 15px;
+	padding-bottom: fixed;
+	bottom: 0;
 }
 
 /*desktop*/
