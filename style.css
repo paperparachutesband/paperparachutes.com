@@ -11,66 +11,58 @@ html, body {
 
 body {
 	width: 100vw;
-	height: 100vh;
+	/*height: 100vh;*/
 	background-color: #000;
 	overflow-x: hidden;
 	overflow-y: hidden;
-	background-image: url(imgs/paperparachutesband.jpg);
+	background: linear-gradient(
+	    rgba(0, 0, 0, 0.4), 
+	    rgba(0, 0, 0, 0.8), 
+	    rgba(0, 0, 0, 1)
+	  ),
+	url(imgs/paperparachutesband.jpg);
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: center top;
 	background-size: cover;
 }
 
-.grid-item.title {
-	z-index: 5000;
-	color: #fff;
-	font-size: 5vw;
-	margin: 0 auto;
-}
-
-a, 
-a:visited, 
-i.fab  {
-	display: inline-block;
-	color: white;
-	font-size: 50px;
-}
-
-a:hover, 
-a:hover i.fab, 
-a:active, 
-a:active i.fab {
-	color: lightgrey;
-	transform: scale(1.2);
-}
-
 .grid-container {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
 	box-sizing: border-box;
 	width: 100vw;
-	min-height: 100vh;
-	overflow: hidden;
-	background: linear-gradient(
-	    rgba(0, 0, 0, 0.6), 
-	    rgba(0, 0, 0, 1)
-	  );
+	min-height: 100vh;	
 }
 
-.icon-wrapper {
+.grid-item.title {
+	z-index: 5;
+	color: #fff;
+	margin: 0 auto;
+}
+
+.grid-item.title img {
 	width: 100vw;
+}
+
+/*icon/button flex layouts*/
+
+.icon-wrapper,
+.about-contact-button  {
+	width: 100vw;
+	margin: 100px auto 30px auto;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
+	z-index: 5;
 }
 
 .icon {
-	width: 25%;
+	width: 20%;
 	height: 80px;
 	margin: 0;
 	padding: 0;
@@ -79,19 +71,197 @@ a:active i.fab {
 	align-items: center;
 }
 
+
+/*all links and icons*/
+a, 
+a:visited, 
+i.fab  {
+	font-size: 45px;
+}
+
+a#bioIcon {
+	font-size: 20px;
+	padding: 2px 4px;
+}
+
+a#top {
+	padding: 0 0 30px 0;
+}
+
+svg * {
+	cursor: pointer;
+}
+
+svg#facebook *,
+svg#contact *, 
+a#top svg * {
+  fill: url(#rg);
+}
+
+svg#instagram * {
+	fill: red;
+}
+
+svg#youtube * {
+	fill: orange;
+}
+
+svg#bandcamp * {
+	fill: yellow;
+}
+
+svg#soundcloud * {
+	fill: green;
+}
+
+svg#twitter * {
+	fill: blue;
+}
+
+svg#spotify * {
+	fill: purple;
+}
+
+a:hover, 
+a:hover i.fab, 
+a:active, 
+a:active i.fab, 
+a:hover svg *, 
+a:active svg * {
+	color: #fff;
+	fill: #fff !important;
+	stroke: #fff;
+}
+
+/*buttons*/
+.about-contact-button {
+	margin: 0 auto;
+	color: #fff;
+  	font-weight: bold;
+  	font-size: 30px;
+  	display: flex;
+  	flex-direction: column;
+}
+
+#bioButton, 
+#contactButton {
+	background-color: #fff;
+	color: red;
+	border-radius: 12px;
+	font-weight: bold;
+	fill: url(#rg);
+	margin: 20px auto;
+	width: 200px;
+	text-align: center;
+	cursor: pointer;
+}
+
+#bioButton svg, 
+#contactButton svg {
+	font-size: 40px;
+}
+
+#bioButton:hover, 
+#contactButton:hover,
+#bioButton:active, 
+#contactButton:active {
+	background-color: black;
+}
+
+/*about section under main page*/
+
+.about-contact {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	position: relative;
+}
+
+#bio {
+	height:60vh;
+	width: 90vw;
+	color: #000;
+	padding: 15px;	
+ 	background-color: white;
+	border-radius: 12px;
+}
+
+#top {
+	position: absolute;
+	bottom: 10px;
+	right: 15px;
+	cursor: pointer;
+}
+
+/*pop-ups*/
+
+#contactModal, 
+#bioModal {
+	height: 100vh;
+	width: 100vw;
+	color:#fff;
+	background-color: rgba(0,0,0,0.8);
+	position: absolute;
+	top: 0;
+	opacity: 0;
+	z-index: -5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#contactModal.visible, 
+#bioModal.visible {
+	opacity: 1;
+	z-index: 10;
+}
+
+.close {
+	/*background-color: red;*/
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
 .footer {
 	width: 100vw;
 	color: #fff;
+	background-color: #000;
 	display: flex;
 	justify-content: center;
+	position: fixed;
+	bottom: 15px;
 }
 
 /*desktop*/
 	@media only screen and (min-width:900px) {
 
-		.icon-wrapper { 
+		.grid-container {
+			justify-content: center;
+		}
+		
+		.grid-item.title img {
 			width: 50vw;
 		}
+
+		.icon-wrapper, 
+		.about-contact-button  { 
+			width: 50vw;
+			margin: 0 auto;
+		}
+
+		.about-contact-button  {
+			margin-top: 30px;
+			flex-direction: row;
+		}
+
+		#bio {
+			width: 50vw;
+			padding: 40px;
+		}
+
+	
 	}
 
 	@media only screen and (max-height:350px) {

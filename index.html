@@ -10,54 +10,112 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 </head>
 <body>
-	<div class="grid-container">
+	<div id="grid" class="grid-container">
 	 	<div class="grid-item title">
-	  		<h1>Paper Parachutes</h1>
+	  		<!-- <h1>Paper Parachutes</h1>  -->
+	  		<img src="imgs/logoInverse.jpg" alt="Paper Parachutes" />
 	 	</div>
 	 	<div class="grid-item icon-wrapper">
+	 		<svg width="0" height="0">
+			  <radialGradient id="rg" r="150%" cx="30%" cy="107%">
+			    <stop stop-color="#000" offset="0" />
+			    <stop stop-color="#ffff00" offset="0.05" />
+			    <stop stop-color="#00bfff" offset="0.45" />
+			    <stop stop-color="#ff1493" offset="0.6" />
+			  </radialGradient>
+			</svg>
+
 		  	<div class="grid-item icon">
 			  	<a href="https://www.facebook.com/paperparachutesband/" target="_blank">
-			  		<i class="fab fa-facebook-f"></i>
+			  		<i id="facebook" class="fab fa-facebook-f"></i>
 			  	</a>
 			</div>
 		  	<div class="grid-item icon">
 		  		<a href="https://www.instagram.com/paperparachutesband/?hl=en" target="_blank">
-		  			<i class="fab fa-instagram"></i>
+		  			<i id="instagram" class="fab fa-instagram"></i>
 		  		</a>
 		  	</div>
 		  	<div class="grid-item icon">
 		  		<a href="https://www.youtube.com/channel/UC0DxQD1cMujGqFIXFbQUCNw" target="_blank">
-		  			<i class="fab fa-youtube"></i>
+		  			<i id="youtube" class="fab fa-youtube"></i>
 		  		</a>
 		  	</div>
 		  	<div class="grid-item icon">
 		  		<a href="https://paperparachutesband.bandcamp.com/" target="_blank">
-		  			<i class="fab fa-bandcamp"></i>
+		  			<i id="bandcamp" class="fab fa-bandcamp"></i>
 		  		</a>
 		  	</div>
 		  	<div class="grid-item icon">
-		  		<a href="" target="_blank">
-		  			<i class="fab fa-snapchat-ghost"></i>
+		  		<a href="https://soundcloud.com/paperparachutesband" target="_blank">
+		  			<i id="soundcloud" class="fab fa-soundcloud"></i>
 		  		</a>
 		  	</div>
 		  	<div class="grid-item icon">
 		  		<a href="https://twitter.com/paperparachute1?lang=en" target="_blank">
-		  			<i class="fab fa-twitter"></i>
+	  				<i id="twitter" class="fab fa-twitter"></i>
 		  		</a>
 		  	</div>
 		  	<div class="grid-item icon">
 		  		<a href="https://open.spotify.com/artist/23Y9Gz1nePMHYZzTQI5Jn3" target="_blank">
-		  			<i class="fab fa-spotify"></i>
+	  				<i id="spotify" class="fab fa-spotify"></i>
 		  		</a>
 		  	</div>
-	  	</div> 
+	  		<div id="bioIconWrapper" class="grid-item icon">
+		  		<a id="bioIcon">
+					<svg height="50" width="50">
+					  <circle cx="25" cy="25" r="20" stroke="url(#rg)" stroke-width="4" fill-opacity="0"></circle>
+					  <text x="8" y="33" fill="url(#rg)">BIO</text>
+					</svg>
+		  		</a>
+		  	</div>
+	  		<div class="grid-item icon">
+		  		<a class="contactIcon" href="mailto:paperparachutesband@gmail.com?subject=I%20Like%20Arepas%20(Contact%20from%20paperparachutesband.com)">
+	  				<i id="contact" class="fas fa-envelope"></i>
+		  		</a>
+		  	</div>
+	  	</div>
+	  	<div class="about-contact-button">
+	  		<a id="bioButton">
+	  			<svg width="200" height="40">
+				  	<text x="70" y="38" fill="url(#rg)">BIO</text>
+				</svg>
+	  		</a>
+	  		<a id="contactButton">
+				<svg width="200" height="40">
+			  		<text x="12" y="38" fill="url(#rg)">CONTACT</text>
+				</svg>
+	  		</a>
+	  	</div>
+
 	  	<!-- end of icon wrapper -->
-	  	<div class="grid-item footer">
+	  	
+	</div>
+
+
+	<div id="bioModal" class="modal" >
+		THIS IS THE BAND BIOGRAPHY
+	<a class="close">x close</a>
+
+	</div>
+
+	<div id="contactModal" class="modal" >
+	THIS IS THE CONTACT FORM
+		<a class="close">x close</a>
+	</div>
+
+	<div class="about-contact">
+  		<div class="about" id="bio">
+  			<h2>About Paper Parachutes</h2>
+  			<p>Cellophane flowers of yellow and green. OH, I BELIEVE IN YESTERDAY.. Oh don't you know that until we touch I never knew the touch was of revealing. -"YES?". And every day. -"WELL, THANK YOU JOHNNY, IT'S BEEN A NICE TO KNOW YA.". But the leaves on the trees.. -"ON BEHALF OF GEORGE AND I, I'D JUST LIKE TO THANK YOU FOR THE SUBSCRIPTION . DON'T YOU MAKE IT NEW.. -"THANK YOU, JOHN.". I want you to bring. And go to rocking joes.. -"WE'VE DONE A LOT OF THINGS THIS YEAR, PAUL.". I'll do you no harm</p>
+			<a id="top"><i class="fas fa-angle-double-up"></i></a>
+  		</div>
+  	</div>
+  	<div class="grid-item footer">
 	  		&copy; <script type="text/javascript">
   				document.write(new Date().getFullYear());
 				</script> Paper Parachutes
 		</div>
 		<!-- end of footer -->
-	</div>
+
+<script src="pp.js"></script>
 </body>
-</html>
