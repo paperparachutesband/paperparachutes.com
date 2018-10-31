@@ -12,14 +12,18 @@
 
   // SEND USER TO BAND BIOGRAPHY ON CLICK
   bioIcon.addEventListener('click', function(event) {
-    event.preventDefault();
-    bio.scrollIntoView({behavior: "smooth"});
+    // event.preventDefault();
+    // bio.scrollIntoView({behavior: "smooth"});
+      grid.classList.add('scrolledUp');
+      bio.classList.add('visible');
   });
 
   // BACK TO TOP
   backToTop.addEventListener('click', function(event) {
-    event.preventDefault();
-    grid.scrollIntoView({behavior: "smooth"});
+    // event.preventDefault();
+    // grid.scrollIntoView({behavior: "smooth"});
+      grid.classList.remove('scrolledUp');
+      bio.classList.remove('visible');  
   });
 
   // OPEN BAND BIOGRAPHY MODAL
@@ -32,7 +36,6 @@
   // OPEN CONTACT FORM
   contactButton.addEventListener('click', function(event) {
     contactModal.classList.add('visible');
-
   });
 
   // CLOSE MODALS
