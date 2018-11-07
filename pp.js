@@ -1,14 +1,57 @@
 (function() { //IIFE - immediately invoked function expression
 
 // FIND SOME KEY DOM ELEMENTS
+  var carousel = document.querySelector('.carousel-wrapper');
   var grid = document.querySelector('#grid');
+  var left = document.querySelector('#left');
+  var right = document.querySelector('#right');
   var bio = document.querySelector('#bio');
-  var bioModal = document.querySelector('#bioModal');
   var bioIcon = document.querySelector('#bioIcon');
-  var bioButton = document.querySelector('#bioButton');
-  var contactButton = document.querySelector('#contactButton');
-  var contactModal = document.querySelector('#contactModal');
   var backToTop = document.querySelector('#top');
+
+  // SCROLL THROUGH IMAGE CAROUSEL
+  var i = 0;
+  var carouselImages = document.querySelectorAll(".carousel-image");
+  function scroll() {
+     switch (i) {
+          case 0:
+              carousel.classList.add('img1');
+              carousel.classList.remove('img2');
+              carousel.classList.remove('img3');
+              break;
+          case 1:
+              carousel.classList.remove('img1');
+              carousel.classList.add('img2');
+              carousel.classList.remove('img3');
+              break;
+          case 2:
+              carousel.classList.remove('img1');
+              carousel.classList.remove('img2');
+              carousel.classList.add('img3');
+              break;          
+        }
+  }
+        
+  left.addEventListener('click', function(event) {
+    if(i>0) {
+      i--;
+    } else {
+      i=2;
+    }
+    scroll();
+    console.log(i);
+  });
+
+  right.addEventListener('click', function(event) {
+    if(i < 2) {
+      i++;
+    } else {
+      i = 0;
+    }
+    scroll();
+    console.log(i);
+  });
+
 
   // SEND USER TO BAND BIOGRAPHY ON CLICK
   bioIcon.addEventListener('click', function(event) {
@@ -28,22 +71,22 @@
 
   // OPEN BAND BIOGRAPHY MODAL
 
-   bioButton.addEventListener('click', function(event) {
-    bioModal.classList.add('visible');  
-   });
+   // bioButton.addEventListener('click', function(event) {
+   //  bioModal.classList.add('visible');  
+   // });
 
 
   // OPEN CONTACT FORM
-  contactButton.addEventListener('click', function(event) {
-    contactModal.classList.add('visible');
-  });
+  // contactButton.addEventListener('click', function(event) {
+  //   contactModal.classList.add('visible');
+  // });
 
   // CLOSE MODALS
-  document.addEventListener('click', function (event) {
-      if ( event.target.classList.contains( 'close' ) ) {
-        bioModal.classList.remove('visible');
-        contactModal.classList.remove('visible');
-      }
-  }, false);
+  // document.addEventListener('click', function (event) {
+  //     if ( event.target.classList.contains( 'close' ) ) {
+  //       bioModal.classList.remove('visible');
+  //       contactModal.classList.remove('visible');
+  //     }
+  // }, false);
 
 } ()) //end of IIFE

@@ -10,21 +10,35 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 </head>
 <body>
+	<div class="carousel-wrapper">
+		<img class="carousel-image img1" src="imgs/paperparachutesband.jpg" alt="1" tabindex="1"/>
+		<img class="carousel-image img2" src="imgs/paperparachutesband2.jpg" alt="2" tabindex="2" />
+		<img class="carousel-image img3" src="imgs/paperparachutesband3.jpg" alt="3" tabindex="3" />
+	</div>
+
+	<div class="carousel-arrows-wrapper">
+  		<a id="left" >
+  			<i  class="fas fa-caret-left"></i>
+		</a>
+		<a id="right">
+  			<i class="fas fa-caret-right"></i>
+		</a>
+  	</div>
+
 	<div id="grid" class="grid-container">
 	 	<div class="grid-item title">
 	  		<!-- <h1>Paper Parachutes</h1>  -->
 	  		<img src="imgs/logoInverse.jpg" alt="Paper Parachutes" />
 	 	</div>
 	 	<div class="grid-item icon-wrapper">
-	 		<svg width="0" height="0">
+	 		<!-- <svg width="0" height="0">
 			  <radialGradient id="rg" r="150%" cx="30%" cy="107%">
 			    <stop stop-color="#000" offset="0" />
 			    <stop stop-color="#ffff00" offset="0.05" />
 			    <stop stop-color="#00bfff" offset="0.45" />
 			    <stop stop-color="#ff1493" offset="0.6" />
 			  </radialGradient>
-			</svg>
-
+			</svg> -->
 		  	<div class="grid-item icon">
 			  	<a href="https://www.facebook.com/paperparachutesband/" target="_blank">
 			  		<i id="facebook" class="fab fa-facebook-f"></i>
@@ -63,8 +77,8 @@
 	  		<div id="bioIconWrapper" class="grid-item icon">
 		  		<a id="bioIcon">
 					<svg height="50" width="50">
-					  <circle cx="25" cy="25" r="20" stroke="url(#rg)" stroke-width="4" fill-opacity="0"></circle>
-					  <text x="8" y="33" fill="url(#rg)">BIO</text>
+					  <circle cx="25" cy="25" r="20" stroke="red" stroke-width="4" fill-opacity="0"></circle>
+					  <text x="8" y="33">BIO</text>
 					</svg>
 		  		</a>
 		  	</div>
@@ -74,7 +88,8 @@
 		  		</a>
 		  	</div>
 	  	</div>
-	  	<div class="about-contact-button">
+	  
+	  	<!-- <div class="about-contact-button">
 	  		<a id="bioButton">
 	  			<svg width="200" height="40">
 				  	<text x="70" y="38" fill="url(#rg)">BIO</text>
@@ -85,23 +100,23 @@
 			  		<text x="12" y="38" fill="url(#rg)">CONTACT</text>
 				</svg>
 	  		</a>
-	  	</div>
+	  	</div> -->
 
 	  	<!-- end of icon wrapper -->
 	  	
 	</div>
 
 
-	<div id="bioModal" class="modal" >
+	<!-- <div id="bioModal" class="modal" >
 		THIS IS THE BAND BIOGRAPHY
 	<a class="close">x close</a>
 
 	</div>
-
-	<div id="contactModal" class="modal" >
+ -->
+	<!-- <div id="contactModal" class="modal" >
 	THIS IS THE CONTACT FORM
 		<a class="close">x close</a>
-	</div>
+	</div> -->
 
 	<div class="about-contact">
   		<div class="about" id="bio">

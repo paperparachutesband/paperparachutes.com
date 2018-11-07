@@ -14,10 +14,15 @@ html, body {
 body {
 	width: 100vw;
 	/*height: 100vh;*/
-	background-color: #000;
+	/*background-color: #000;*/
+	/*background: linear-gradient(
+	    rgba(0, 0, 0, 0.4), 
+	    rgba(0, 0, 0, 0.8), 
+	    rgba(0, 0, 0, 1)
+	  );*/
 	overflow-x: hidden;
 	overflow-y: hidden;
-	background: linear-gradient(
+	/*background: linear-gradient(
 	    rgba(0, 0, 0, 0.4), 
 	    rgba(0, 0, 0, 0.8), 
 	    rgba(0, 0, 0, 1)
@@ -26,7 +31,60 @@ body {
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: center top;
+	background-size: cover;*/
+}
+
+.carousel-wrapper {
+	width: 300vw;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: row;
+	left: 0;
+	top: 0;
+	overflow-x: hidden;
+	position: fixed;
+	transition: left 1s;
+	background-color: #000;
 	background-size: cover;
+	background-attachment: fixed;
+}
+
+.carousel-wrapper.img1 {
+	left: 0;
+}
+
+.carousel-wrapper.img2 {
+	left: -100vw;
+}
+
+.carousel-wrapper.img3 {
+	left: -200vw;
+}
+
+.carousel-image {
+	width: 100vw;
+	image-repeat: no-repeat;
+	image-position: center top;
+	object-fit: cover;
+	opacity: 0.3;
+}
+
+/*icons to scroll through images */
+#left, 
+#right {
+	color: #008B8B;
+	font-size: 10vw;
+	position: fixed;
+	top: 70vh;
+	z-index: 100000;
+}
+
+#left {
+	left: 2vw;
+}
+
+#right {
+	right: 2vw;
 }
 
 #grid {
@@ -34,7 +92,6 @@ body {
 	top: 0;
 	transition: top 0.6s ease-in;
 }	
-
 
 #grid.scrolledUp { /*this smooth-scrolls in iOs */
 	top: -1000px;
@@ -55,12 +112,13 @@ body {
 .grid-item.title {
 	z-index: 5;
 	color: #fff;
-	margin: 0 auto;
+	margin: 0 auto 100px auto;
 }
 
 .grid-item.title img {
 	width: 100vw;
 }
+
 
 /*icon/button flex layouts*/
 
@@ -98,6 +156,7 @@ i.fab  {
 a#bioIcon {
 	font-size: 20px;
 	padding: 2px 4px;
+	fill: red;
 }
 
 a#top {
@@ -108,18 +167,23 @@ svg * {
 	cursor: pointer;
 }
 
-svg#facebook *,
-svg#contact *, 
+svg#facebook *, 
 a#top svg * {
-  fill: url(#rg);
+  /*fill: url(#rg);*/
+  fill: red;
+  color: red;
+}
+
+svg#contact * {
+	color: green;
 }
 
 svg#instagram * {
-	fill: red;
+	fill: #ff00ff;
 }
 
 svg#youtube * {
-	fill: orange;
+	fill: #ff7f80;
 }
 
 svg#bandcamp * {
@@ -127,7 +191,7 @@ svg#bandcamp * {
 }
 
 svg#soundcloud * {
-	fill: green;
+	fill: #9acd32;
 }
 
 svg#twitter * {
@@ -172,7 +236,7 @@ a:active svg * {
 	cursor: pointer;
 }
 
-#bioButton svg, 
+/*#bioButton svg, 
 #contactButton svg {
 	font-size: 40px;
 }
@@ -182,7 +246,7 @@ a:active svg * {
 #bioButton:active, 
 #contactButton:active {
 	background-color: black;
-}
+}*/
 
 /*about section under main page*/
 
@@ -220,7 +284,7 @@ a:active svg * {
 
 /*pop-ups*/
 
-#contactModal, 
+/*#contactModal, 
 #bioModal {
 	height: 100vh;
 	width: 100vw;
@@ -246,7 +310,7 @@ a:active svg * {
 	top: 0;
 	right: 0;
 	cursor: pointer;
-}
+}*/
 
 .footer {
 	width: 100vw;
@@ -264,11 +328,16 @@ a:active svg * {
 	@media only screen and (min-width:900px) {
 
 		.grid-container {
-			justify-content: center;
+			justify-content: flex-start;
 		}
 		
 		.grid-item.title img {
-			width: 50vw;
+			margin: -50px 0 100px 0;
+		}
+
+		#left, 
+		#right { 
+			font-size: 5vw;
 		}
 
 		.icon-wrapper, 
