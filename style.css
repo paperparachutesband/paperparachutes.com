@@ -112,12 +112,39 @@ body {
 .grid-item.title {
 	z-index: 5;
 	color: #fff;
-	margin: 0 auto 100px auto;
+	width: 95vw;
+	height: 20vh;
+	margin: 10px auto 100px auto;
+	background-image: url(imgs/PaperParachutesLogo.png);
+  	background-size: contain;
+  	background-position: center;
+  	background-attachment: fixed;
+    -webkit-mask-image: url(imgs/PaperParachutesLogo.png);
+    -webkit-mask-mode: alpha;
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-image: url(imgs/PaperParachutesLogo.png);
+    mask-mode: alpha;
+    mask-size: contain;
+    mask-position: center;
+    /*background-blend-mode: darken;*/
+    background: radial-gradient(
+	    #000, 
+	    #ffff00, 
+	    #00bfff,
+	    #ff1493
+	  );
+    mask-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+
 .grid-item.title img {
-	width: 95vw;
-	margin: 0 auto;
+	/*width: 95vw;
+	margin: 0 auto;*/
 }
 
 /*icon/button flex layouts*/
