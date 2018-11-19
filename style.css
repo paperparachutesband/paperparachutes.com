@@ -116,9 +116,9 @@ body {
 }
 
 .grid-item.title img {
-	width: 100vw;
+	width: 95vw;
+	margin: 0 auto;
 }
-
 
 /*icon/button flex layouts*/
 
