@@ -35,7 +35,7 @@ body {
 }
 
 .carousel-wrapper {
-	width: 300vw;
+	width: 200vw;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: row;
@@ -57,9 +57,9 @@ body {
 	left: -100vw;
 }
 
-.carousel-wrapper.img3 {
+/*.carousel-wrapper.img3 {
 	left: -200vw;
-}
+}*/
 
 .carousel-image {
 	width: 100vw;
@@ -131,7 +131,7 @@ body {
     /*background-blend-mode: darken;*/
     background: radial-gradient(
 	    #000, 
-	    #ffff00, 
+	    #DC143C,
 	    #00bfff,
 	    #ff1493
 	  );
@@ -358,8 +358,8 @@ a:active svg * {
 			justify-content: flex-start;
 		}
 		
-		.grid-item.title img {
-			margin: 0 0 100px 0;
+		.grid-item.title  {
+			margin: 0 0 200px 0;
 		}
 
 		#left, 
