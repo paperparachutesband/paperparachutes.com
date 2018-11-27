@@ -39,15 +39,20 @@ body {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: row;
+	position: fixed;
 	left: 0;
 	top: 0;
 	overflow-x: hidden;
-	position: fixed;
 	transition: left 1s;
 	background-color: #000;
 	background-size: cover;
 	background-attachment: fixed;
+	background-position: center top;
 }
+
+/*.carousel-wrapper.img3 {
+	left: -200vw;
+}*/
 
 .carousel-wrapper.img1 {
 	left: 0;
@@ -57,14 +62,13 @@ body {
 	left: -100vw;
 }
 
-/*.carousel-wrapper.img3 {
-	left: -200vw;
-}*/
-
 .carousel-image {
 	width: 100vw;
+	top: 0;
+	vertical-align: top;
+	/*min-height: 100%;*/
 	image-repeat: no-repeat;
-	image-position: center top;
+	object-position: center top;
 	object-fit: cover;
 	opacity: 0.3;
 }
@@ -359,7 +363,7 @@ a:active svg * {
 		}
 		
 		.grid-item.title  {
-			margin: 0 0 200px 0;
+			margin: 0 0 35vh 0;
 		}
 
 		#left, 
