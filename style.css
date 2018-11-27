@@ -113,43 +113,54 @@ body {
 	overflow-y: hidden;
 }
 
-.grid-item.title {
-	z-index: 5;
-	color: #fff;
+.grid-item.title { 
+	display: block;
 	width: 95vw;
 	height: 20vh;
 	margin: 10px auto 100px auto;
 	background-image: url(imgs/PaperParachutesLogo.png);
   	background-size: contain;
   	background-position: center;
-  	background-attachment: fixed;
+  	background-repeat: no-repeat;
+  	object-attachment: fixed;
+}
+
+.title-inner {
+	z-index: 5000000000;
+	color: #fff;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+  	mask: url(imgs/PaperParachutesLogo.png);
+    mask-mode: alpha;
+    mask-size: contain;
+    mask-attachment: fixed;
+    mask-position: center;
+    mask-repeat: no-repeat;
     -webkit-mask-image: url(imgs/PaperParachutesLogo.png);
+    -webkit-mask: url(imgs/PaperParachutesLogo.png);
     -webkit-mask-mode: alpha;
     -webkit-mask-size: contain;
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
-    mask-image: url(imgs/PaperParachutesLogo.png);
-    mask-mode: alpha;
-    mask-size: contain;
-    mask-position: center;
-    /*background-blend-mode: darken;*/
+    -webkit-mask-attachment: fixed;
     background: radial-gradient(
 	    #000, 
+	    #000,
+	    #000,
 	    #DC143C,
 	    #00bfff,
 	    #ff1493
 	  );
-    mask-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
 }
 
-
-.grid-item.title img {
-	/*width: 95vw;
-	margin: 0 auto;*/
-}
 
 /*icon/button flex layouts*/
 
