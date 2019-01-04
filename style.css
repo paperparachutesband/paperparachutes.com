@@ -195,10 +195,18 @@ i.fab  {
 	font-size: 45px;
 }
 
-a#bioIcon {
+a#bioIcon, 
+a#epkIcon {
 	font-size: 20px;
 	padding: 2px 4px;
+}
+
+a#bioIcon {
 	fill: red;
+}
+
+a#epkIcon {
+	fill: orange;
 }
 
 a#top {
@@ -301,11 +309,12 @@ a:active svg * {
 }
 
 #bio {
-	height:60vh;
+	height:80vh;
 	width: 90vw;
 	min-width: 300px;
 	color: #000;
-	padding: 15px;	
+	font-size: 14px;
+	padding: 12px;	
  	background-color: white;
 	border-radius: 12px;
 	position: absolute;
@@ -314,7 +323,7 @@ a:active svg * {
 }
 
 #bio.visible {
-	top: 20%;
+	top: 10%;
 }
 
 #top {
