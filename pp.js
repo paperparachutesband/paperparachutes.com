@@ -55,38 +55,16 @@
 
   // SEND USER TO BAND BIOGRAPHY ON CLICK
   bioIcon.addEventListener('click', function(event) {
-    // event.preventDefault();
-    // bio.scrollIntoView({behavior: "smooth"});
+    event.preventDefault();
       grid.classList.add('scrolledUp');
       bio.classList.add('visible');
   });
 
   // BACK TO TOP
   backToTop.addEventListener('click', function(event) {
-    // event.preventDefault();
-    // grid.scrollIntoView({behavior: "smooth"});
+    event.preventDefault();
       grid.classList.remove('scrolledUp');
       bio.classList.remove('visible');  
   });
-
-  // OPEN BAND BIOGRAPHY MODAL
-
-   // bioButton.addEventListener('click', function(event) {
-   //  bioModal.classList.add('visible');  
-   // });
-
-
-  // OPEN CONTACT FORM
-  // contactButton.addEventListener('click', function(event) {
-  //   contactModal.classList.add('visible');
-  // });
-
-  // CLOSE MODALS
-  // document.addEventListener('click', function (event) {
-  //     if ( event.target.classList.contains( 'close' ) ) {
-  //       bioModal.classList.remove('visible');
-  //       contactModal.classList.remove('visible');
-  //     }
-  // }, false);
 
 } ()) //end of IIFE

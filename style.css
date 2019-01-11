@@ -3,6 +3,7 @@
 	font-family: 'Oxygen', sans-serif;
 	font-weight: 300;
 }
+
 html, body {
 	height: 100%;
 	margin: 0;
@@ -13,25 +14,13 @@ html, body {
 
 body {
 	width: 100vw;
-	/*height: 100vh;*/
-	/*background-color: #000;*/
-	/*background: linear-gradient(
-	    rgba(0, 0, 0, 0.4), 
-	    rgba(0, 0, 0, 0.8), 
-	    rgba(0, 0, 0, 1)
-	  );*/
 	overflow-x: hidden;
 	overflow-y: hidden;
-	/*background: linear-gradient(
-	    rgba(0, 0, 0, 0.4), 
-	    rgba(0, 0, 0, 0.8), 
-	    rgba(0, 0, 0, 1)
-	  ),
-	url(imgs/paperparachutesband.jpg);
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	background-position: center top;
-	background-size: cover;*/
+	position: relative;
+}
+
+h1 {
+	color: rgba(0,0,0,0);
 }
 
 .carousel-wrapper {
@@ -50,10 +39,6 @@ body {
 	background-position: center top;
 }
 
-/*.carousel-wrapper.img3 {
-	left: -200vw;
-}*/
-
 .carousel-wrapper.img1 {
 	left: 0;
 }
@@ -66,7 +51,6 @@ body {
 	width: 100vw;
 	top: 0;
 	vertical-align: top;
-	/*min-height: 100%;*/
 	image-repeat: no-repeat;
 	object-position: center top;
 	object-fit: cover;
@@ -114,10 +98,10 @@ body {
 }
 
 .grid-item.title { 
-	display: block;
+	display: block !important;
 	width: 95vw;
 	height: 20vh;
-	margin: 10px auto 100px auto;
+	margin: 10px auto 70px auto;
 	background-image: url(imgs/PaperParachutesLogo.png);
   	background-size: contain;
   	background-position: center;
@@ -161,11 +145,9 @@ body {
     background-size: cover;
 }
 
-
 /*icon/button flex layouts*/
 
-.icon-wrapper,
-.about-contact-button  {
+.icon-wrapper {
 	width: 100vw;
 	min-width: 300px;
 	margin: 100px auto 30px auto;
@@ -175,6 +157,7 @@ body {
 	align-items: center;
 	flex-wrap: wrap;
 	z-index: 5;
+	clear: both;
 }
 
 .icon {
@@ -211,6 +194,7 @@ a#epkIcon {
 
 a#top {
 	padding: 0 0 30px 0;
+	cursor: pointer;
 }
 
 svg * {
@@ -219,7 +203,6 @@ svg * {
 
 svg#facebook *, 
 a#top svg * {
-  /*fill: url(#rg);*/
   fill: red;
   color: red;
 }
@@ -286,17 +269,44 @@ a:active svg * {
 	cursor: pointer;
 }
 
-/*#bioButton svg, 
-#contactButton svg {
-	font-size: 40px;
+/*mailing list signup form*/
+
+#mc_embed_signup {
+	/*background:#fff; */
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	clear: left; 
+	font: 14px Helvetica,Arial,sans-serif; 
+	width: 70%;
+	margin-top: 30px;
 }
 
-#bioButton:hover, 
-#contactButton:hover,
-#bioButton:active, 
-#contactButton:active {
-	background-color: black;
-}*/
+#mc-embedded-subscribe-form label {
+	width: 100%;
+	display: inline-block;
+	text-align: center;
+}
+
+#mc_embed_signup input {
+	display: inline-block;
+	margin-top: 10px;
+	float: left;
+}
+
+#mc_embed_signup input.email {
+	width: 65%;
+	height: 40px;
+	font-size: 14px;
+	padding-left: 14px;
+}
+
+#mc_embed_signup input.button {
+	width: 33%;
+	background-color: #d3d3d3; /*do not remove the background-color*/
+	height: 40px !important;
+	margin: 10px 0 0 2%;
+}
 
 /*about section under main page*/
 
@@ -309,7 +319,7 @@ a:active svg * {
 }
 
 #bio {
-	height:80vh;
+	height: 80vh;
 	width: 90vw;
 	min-width: 300px;
 	color: #000;
@@ -318,50 +328,31 @@ a:active svg * {
  	background-color: white;
 	border-radius: 12px;
 	position: absolute;
-	top: 120%;
+	top: 150vh;
 	transition: top 0.6s ease-in;
 }
 
 #bio.visible {
-	top: 10%;
+	top: 10vh;
+	margin-bottom: 150px;
+	overflow: scroll;
 }
 
-#top {
+.back-to-top-wrapper {
 	position: absolute;
-	bottom: 0px;
-	right: 15px;
-	cursor: pointer;
+	bottom: 0;
+	right: 10vw;
+	height: 100px;
+	width: 90vw;
+	min-width: 300px;
+	text-align: right;
+	display: none;
 }
 
-/*pop-ups*/
-
-/*#contactModal, 
-#bioModal {
-	height: 100vh;
-	width: 100vw;
-	color:#fff;
-	background-color: rgba(0,0,0,0.8);
-	position: absolute;
-	top: 0;
-	opacity: 0;
-	z-index: -5;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+#bio.visible ~ .back-to-top-wrapper {
+	display: block;
 }
 
-#contactModal.visible, 
-#bioModal.visible {
-	opacity: 1;
-	z-index: 10;
-}
-
-.close {
-	position: absolute;
-	top: 0;
-	right: 0;
-	cursor: pointer;
-}*/
 
 .footer {
 	width: 100vw;
@@ -383,7 +374,8 @@ a:active svg * {
 		}
 		
 		.grid-item.title  {
-			margin: 0 0 35vh 0;
+			margin: 0 0 100px 0;
+			min-height: 150px;
 		}
 
 		#left, 
@@ -404,7 +396,12 @@ a:active svg * {
 
 		#bio {
 			width: 50vw;
-			padding: 40px;
+			padding: 12px 40px 40px 40px;
+		}
+
+		.back-to-top-wrapper {
+			width: 50vw;
+			right: 25vw;
 		}
 
 	
@@ -412,7 +409,8 @@ a:active svg * {
 
 	@media only screen and (max-height:350px) {
 		body,
-		.grid-container  {
+		.grid-container, 
+		#bio  {
 			overflow-y: scroll;
 		}
 
