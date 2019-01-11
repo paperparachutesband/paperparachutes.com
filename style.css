@@ -330,13 +330,13 @@ a:active svg * {
 	border-radius: 12px;
 	position: absolute;
 	top: 150vh;
+	overflow: scroll;
 	transition: top 0.6s ease-in;
 }
 
 #bio.visible {
 	top: 10vh;
 	margin-bottom: 150px;
-	overflow: scroll;
 }
 
 .back-to-top-wrapper {
