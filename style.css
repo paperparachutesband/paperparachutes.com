@@ -407,6 +407,16 @@ a:active svg * {
 	
 	}
 
+	@media only screen and (max-height:700px) { 
+		.grid-item.title {
+			margin: 10px auto 0 auto;
+		 }
+
+		.icon-wrapper {
+			margin-top: 0;
+		}
+	}
+
 	@media only screen and (max-height:350px) {
 		body,
 		.grid-container, 
