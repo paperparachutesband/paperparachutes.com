@@ -26,7 +26,7 @@ h1 {
 /*image carousel*/
 
 .carousel-wrapper {
-	width: 300vw;
+	width: 600vw;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: row;
@@ -51,6 +51,18 @@ h1 {
 
 .carousel-wrapper.img3 {
 	left: -200vw;
+}
+
+.carousel-wrapper.img4 {
+	left: -300vw;
+}
+
+.carousel-wrapper.img5 {
+	left: -400vw;
+}
+
+.carousel-wrapper.img6 {
+	left: -500vw;
 }
 
 .carousel-image {

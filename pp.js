@@ -12,23 +12,57 @@
   // SCROLL THROUGH IMAGE CAROUSEL
   var i = 0;
   var carouselImages = document.querySelectorAll(".carousel-image");
+ 
   function scroll() {
      switch (i) {
           case 0:
               carousel.classList.add('img1');
               carousel.classList.remove('img2');
               carousel.classList.remove('img3');
+              carousel.classList.remove('img4');
+              carousel.classList.remove('img5');
+              carousel.classList.remove('img6');
               break;
           case 1:
               carousel.classList.remove('img1');
               carousel.classList.add('img2');
               carousel.classList.remove('img3');
+              carousel.classList.remove('img4');
+              carousel.classList.remove('img5');
+              carousel.classList.remove('img6');              
               break;
           case 2:
               carousel.classList.remove('img1');
               carousel.classList.remove('img2');
               carousel.classList.add('img3');
-              break;          
+              carousel.classList.remove('img4');
+              carousel.classList.remove('img5');
+              carousel.classList.remove('img6');
+              break;  
+          case 3:
+              carousel.classList.remove('img1');
+              carousel.classList.remove('img2');
+              carousel.classList.remove('img3');
+              carousel.classList.add('img4');
+              carousel.classList.remove('img5');
+              carousel.classList.remove('img6');
+              break;  
+          case 4:
+              carousel.classList.remove('img1');
+              carousel.classList.remove('img2');
+              carousel.classList.remove('img3');
+              carousel.classList.remove('img4');
+              carousel.classList.add('img5');
+              carousel.classList.remove('img6');
+              break;  
+          case 5:
+              carousel.classList.remove('img1');
+              carousel.classList.remove('img2');
+              carousel.classList.remove('img3');
+              carousel.classList.remove('img4');
+              carousel.classList.remove('img5');
+              carousel.classList.add('img6');
+              break;                
         }
   }
         
@@ -36,14 +70,14 @@
     if(i>0) {
       i--;
     } else {
-      i=2;
+      i=5;
     }
     scroll();
     console.log(i);
   });
 
   right.addEventListener('click', function(event) {
-    if(i < 2) {
+    if(i < 5) {
       i++;
     } else {
       i = 0;
@@ -66,5 +100,7 @@
       grid.classList.remove('scrolledUp');
       bio.classList.remove('visible');  
   });
+
+ scroll();
 
 } ()) //end of IIFE
