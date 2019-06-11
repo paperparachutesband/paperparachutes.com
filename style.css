@@ -70,9 +70,21 @@ h1 {
 	top: 0;
 	vertical-align: top;
 	image-repeat: no-repeat;
+	
 	object-position: center top;
-	object-fit: cover;
-	opacity: 0.3;
+	object-fit: cover;	
+	
+	opacity: 0.75;
+	
+    //min-height: 100%;
+    //min-width: 1024px;
+  
+    //width: 100%;
+    height: 100%;
+  
+    //position: fixed;
+    //top: 0;
+    //left: 0;
 }
 
 /*icons to scroll through images */
@@ -166,8 +178,11 @@ h1 {
     background-size: cover;
 }
 
-/*icon/button flex layouts*/
+.grid-item.spacer { 
+	flex-grow: 0.60;
+}
 
+/*icon/button flex layouts*/
 .icon-wrapper {
 	width: 100vw;
 	min-width: 300px;
@@ -179,6 +194,7 @@ h1 {
 	flex-wrap: wrap;
 	z-index: 5;
 	clear: both;
+	
 }
 
 .icon {
@@ -286,7 +302,7 @@ a:active svg * {
 	font-weight: bold;
 	clear: left; 
 	font: 14px Helvetica,Arial,sans-serif; 
-	width: 70%;
+	width: 100%;
 	margin-top: 30px;
 }
 
@@ -362,6 +378,14 @@ a:active svg * {
 	display: block;
 }
 
+.slide-out-div {
+  padding: 20px;
+  width: 380px;
+  background: #000000;
+  border: #29216d 0px solid;
+  z-index: 12;
+}  
+
 
 .footer {
 	width: 100vw;
@@ -376,62 +400,66 @@ a:active svg * {
 }
 
 /*desktop*/
-	@media only screen and (min-width:900px) {
+@media only screen and (min-width:900px) {
 
-		.grid-container {
-			justify-content: flex-start;
-		}
-		
-		.grid-item.title  {
-			margin: 0 0 100px 0;
-			min-height: 150px;
-		}
-
-		#left, 
-		#right { 
-			font-size: 5vw;
-		}
-
-		.icon-wrapper, 
-		.about-contact-button  { 
-			width: 50vw;
-			margin: 0 auto;
-		}
-
-		.about-contact-button  {
-			margin-top: 30px;
-			flex-direction: row;
-		}
-
-		#bio {
-			width: 50vw;
-			padding: 12px 40px 40px 40px;
-		}
-
-		.back-to-top-wrapper {
-			width: 50vw;
-			right: 25vw;
-		}
-
+	.grid-container {
+		justify-content: flex-start;
+	}
 	
+	.grid-item.title  {
+		margin: 0 0 100px 0;
+		min-height: 150px;
 	}
 
-	@media only screen and (max-height:700px) { 
-		.grid-item.title {
-			margin: 10px auto 0 auto;
-		 }
-
-		.icon-wrapper {
-			margin-top: 0;
-		}
+	#left, 
+	#right { 
+		font-size: 5vw;
 	}
 
-	@media only screen and (max-height:350px) {
-		body,
-		.grid-container, 
-		#bio  {
-			overflow-y: scroll;
-		}
-
+	.icon-wrapper, 
+	.about-contact-button  { 
+		width: 50vw;
+		margin: 0 auto;
 	}
+
+	.about-contact-button  {
+		margin-top: 30px;
+		flex-direction: row;
+	}
+
+	#bio {
+		width: 50vw;
+		padding: 12px 40px 40px 40px;
+	}
+
+	.back-to-top-wrapper {
+		width: 50vw;
+		right: 25vw;
+	}
+
+
+}
+
+@media only screen and (max-height:700px) { 
+	.grid-item.title {
+		margin: 10px auto 0 auto;
+	 }
+
+	.icon-wrapper {
+		margin-top: 0;
+	}
+}
+
+@media only screen and (max-height:350px) {
+	body,
+	.grid-container, 
+	#bio  {
+		overflow-y: scroll;
+	}
+
+}
+
+
+
+
 

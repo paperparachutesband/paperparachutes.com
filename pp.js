@@ -73,7 +73,7 @@
       i=5;
     }
     scroll();
-    console.log(i);
+    //console.log(i);
   });
 
   right.addEventListener('click', function(event) {
@@ -83,7 +83,7 @@
       i = 0;
     }
     scroll();
-    console.log(i);
+    //console.log(i);
   });
 
 
@@ -102,5 +102,18 @@
   });
 
  scroll();
+
+	$('.slide-out-div').tabSlideOut({
+		tabHandle: '.handle',                     //class of the element that will become your tab
+		pathToTabImage: 'imgs/newsletter44.png', //path to the image for the tab //Optionally can be set using css
+		imageHeight: '50px',                     //height of tab image           //Optionally can be set using css
+		imageWidth: '50px',                       //width of tab image            //Optionally can be set using css
+		tabLocation: 'bottom',                      //side of screen where tab lives, top, right, bottom, or left
+		speed: 300,                               //speed of animation
+		action: 'click',                          //options: 'click' or 'hover', action to trigger animation
+		topPos: '20px',                          //position from the top/ use if tabLocation is left or right
+		leftPos: '10px',                          //position from left/ use if tabLocation is bottom or top
+		fixedPosition: false                      //options: true makes it stick(fixed position) on scroll
+	});
 
 } ()) //end of IIFE
