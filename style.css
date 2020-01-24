@@ -162,14 +162,14 @@ h1 {
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: center;
     -webkit-mask-attachment: fixed;
-    background: radial-gradient(
-	    #000, 
-	    #000,
-	    #000,
-	    #DC143C,
-	    #00bfff,
-	    #ff1493
-	  );
+   /* background: radial-gradient(*/
+	  /*  #000, */
+	  /*  #000,*/
+	  /*  #000,*/
+	  /*  #DC143C,*/
+	  /*  #00bfff,*/
+	  /*  #ff1493*/
+	  /*);*/
     display: flex;
     justify-content: center;
     align-items: center;
